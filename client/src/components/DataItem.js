@@ -53,10 +53,6 @@ const DataItem = ({dataitem,temp2,settemp2}) => {
                     <div className="answer">Address : {address}</div>
                 </div>
             </div>
-            <div className="deleteButton">
-                {success===false?<div className="inform fail">{alert}</div>:null}
-                <button onClick={deleteItem} disabled={loading}>Delete</button>
-            </div>
         </div>
     )
 }
