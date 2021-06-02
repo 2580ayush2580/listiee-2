@@ -45,7 +45,7 @@ const Data = () => {
             } else {
               console.log("Not Available");
             }
-    },[])
+    },[latitude,longitude])
    
     const submitHandler=async (e)=>{
         e.preventDefault()
