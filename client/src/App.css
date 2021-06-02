@@ -1,0 +1,244 @@
+*{
+  margin: 0;
+  padding: 0;
+  line-height: auto !important;
+}
+.wrapper{
+  margin: auto;
+  height: 100vh;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.table{
+  max-width: 700px;
+  margin: 2rem;
+  padding: 3rem;
+  display: flex;
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.548);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.table form{
+  width: 100%;
+}
+
+.table button{
+  width: 95%;
+  border-radius: 100px;
+  border:0px;
+  outline: none;
+  background-image: linear-gradient(to right,rgb(0, 174, 255),rgb(10, 10, 223));
+  transition: all .5s;
+}
+.table button:focus{
+  outline: none;
+}
+.table button:hover{
+  background-image: linear-gradient(to left,rgb(0, 174, 255),rgb(10, 10, 223));
+}
+.table>:not(:last-child)>:last-child>*{
+  border-bottom-color: rgb(170, 168, 168);
+}
+.table input{
+  margin:1.2rem auto;
+  width:95%;
+  padding:0 1rem;
+  outline: none;
+  border:1px solid rgb(170, 168, 168);
+  border-radius: 100px;
+  transition: all .2s;
+}
+.table input:focus{
+  outline: none;
+  margin:1.2rem auto;
+  width:100%;
+}
+.inform{
+  margin-top: 5px;
+  width: 95%;
+  padding: 0.6rem 1rem;
+  border-radius: 100px;
+}
+.inform.fail{
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  margin: 0 auto;
+}
+.inform.success{
+  color: #1b5f42;
+  background-color: #72d1a8cd;
+  border-color: #f5c2c7;
+  margin:0 auto;
+}
+.data-wrapper{
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.data-wrapper .tab1{
+  position: fixed;
+  left:0px;
+  width: 40%;
+}
+
+.data-wrapper .tab2{
+  position:absolute;
+  top:80px;
+  width: 45%;
+  right: 5%;
+}
+
+.dataitem-wrapper{
+  /* border:1px solid #000; */
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.344);
+  margin: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  width: 90% !important;
+}
+.dataitem-wrapper:hover{
+  transform: translateY(-2px);
+  box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, 0.344);
+}
+.dataitem-wrapper .details{
+  display:flex;
+  flex-direction: column;
+}
+.dataitem-wrapper .deleteButton{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.dataitem-wrapper .deleteButton .inform{
+  height: 20px;
+}
+
+.dataitem-wrapper .deleteButton button{
+  border:none;
+  outline: none;
+  background-image: linear-gradient(to right ,rgba(206, 30, 65, 0.72),rgb(165, 9, 40));
+  color: #fff;
+  padding: 5px;
+  border-radius: 100px;
+  width: 139px;
+}
+
+.dataitem-wrapper .details{
+  justify-content: center;
+  align-items: center;
+}
+
+.dataitem-wrapper .details .detail{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.dataitem-wrapper .details .detail .answer{
+  /* border:1px solid #000; */
+  background-image: linear-gradient(to left,rgba(0, 174, 255, 0.611),rgba(10, 10, 223, 0.583));
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px 7px;
+}
+
+.dataitem-wrapper .details .detail-image img{
+  max-width:250px;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.d-flex{
+  display:flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width:800px){
+
+  .table{
+    margin: 0px;
+    margin-top: 100px;
+  }
+  .data-wrapper{
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    position: static;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .data-wrapper .tab1{
+    margin-top:100px;
+    width: 100%;
+    position: static;
+
+  }
+  .data-wrapper .tab2{
+    width: 100%;
+    position: static;
+  }
+  .data-wrapper .tab2 .list ul{ 
+    margin: 0;
+    padding: 0;
+  }
+  .dataitem-wrapper{
+    margin: 0;
+  }
+  
+}
+@media only screen and (max-width:700px){
+  .dataitem-wrapper{
+    margin: 0;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dataitem-wrapper div{
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width:400px){
+  .table{
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width:350px){
+  .table{
+    margin-top: 300px;
+  }
+}
+
+.my-custom-add-post{
+  margin:70px 10px 20px 20px;
+  background-image: linear-gradient(to right ,rgba(52, 136, 13, 0.72),rgb(42, 181, 206));
+  padding: 10px;
+  width:150px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.my-custom-add-post-link{
+  text-decoration: none !important;
+  color: #ffffff;
+  font-weight: bold;
+}
