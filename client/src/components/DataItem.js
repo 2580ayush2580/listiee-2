@@ -1,38 +1,5 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 const DataItem = ({dataitem,temp2,settemp2}) => {
-    const [alert, setalert] = useState(null)
-    const [loading, setloading] = useState(null)
-    const [success, setsuccess] = useState(null)
-    const data=localStorage.getItem('user')
-    let currentUser
-    if(data)
-    {
-      currentUser=JSON.parse(data)
-    }
-    const deleteItem=async()=>{
-        const config = {
-            headers: {
-            'Content-type':'application/json',
-            Authorization:`Bearer ${currentUser.token}` 
-            },
-        }
-        try{    
-            setloading(true)
-            const {data}=await axios.delete(`https://listiee.herokuapp.com/api/data/${dataitem._id}`,config)
-            // const {data}=await axios.delete(`https://pure-river-17146.herokuapp.com/api/data/${dataitem._id}`,config)
-            setsuccess(data.success)
-            setalert(data.message)
-            setloading(false)
-            if(temp2)
-            settemp2(false)
-            else
-            settemp2(true)
-        }catch(e){
-            setloading(false)
-            setalert('Some error occured')
-        }
-    }
     const {about,heading,img,address}=dataitem
     const imageValue = "https://listiee.herokuapp.com/" + img;
     return (
